@@ -32,11 +32,11 @@ app.set("view engine", "handlebars");
 app.set('index', __dirname + '/views');
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-//let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NYTarticles";
-mongoose.connect("mongodb://localhost/NYTarticles", { useNewUrlParser: true });
+let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/NYTarticles";
+// mongoose.connect("mongodb://localhost/NYTarticles", { useNewUrlParser: true });
 
 
-//mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 let results = [];
 
